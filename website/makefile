@@ -1,7 +1,7 @@
 deploy: apply
-	cd /Users/malikalizade/PLAYGROUND/my-static-site/dist && \
+	cd  && \
 	   /usr/local/bin/aws s3 sync ./ \
-	   s3://liveaws.com
+	   s3://
 
 apply: plan
 	terraform apply $(TF_WORKSPACE).tfplan
